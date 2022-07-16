@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:newbmi/results_page.dart';
-import 'icon_content.dart';
-import 'reusable_card.dart';
-import 'constants.dart';
-import 'results_page.dart';
-import 'round_icon_button.dart';
-import 'button_button.dart';
+import '../icon_content.dart';
+import '../reusable_card.dart';
+import '../components/constants.dart';
+import '../results_page.dart';
+import '../components/round_icon_button.dart';
+import '../components/button_button.dart';
 
 enum Gender { female, male }
 
