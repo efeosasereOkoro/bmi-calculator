@@ -48,6 +48,16 @@ class ResultsPage extends StatelessWidget {
                     style: kBMITextStyle,
                   ),
                   Text(
+                    "Normal BMI range:",
+                    style: kBodyTextStyleDark,
+                    textAlign: TextAlign.center,
+                  ),
+                  Text(
+                    "18.5 - 25 kg/m2",
+                    style: kBodyTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  Text(
                     interpretation!,
                     style: kBodyTextStyle,
                     textAlign: TextAlign.center,
@@ -59,7 +69,7 @@ class ResultsPage extends StatelessWidget {
           ),
           BottomButton(
             onTap: () => Navigator.pop(context),
-            buttonTitle: "RE-CALCULATE",
+            buttonTitle: "RE-CALCULATE YOUR BMI",
           )
         ],
       ),

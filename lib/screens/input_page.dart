@@ -214,7 +214,7 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
           BottomButton(
-            buttonTitle: 'CALCULATE',
+            buttonTitle: 'CALCULATE YOUR BMI',
             onTap: () {
               CalculatorBrain calc =
                   CalculatorBrain(height: height, weight: weight);
