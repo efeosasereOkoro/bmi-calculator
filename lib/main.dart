@@ -22,7 +22,7 @@ class BMICalculator extends StatelessWidget {
 
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: const Color(0xFF0A0E21),
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           backgroundColor: Color(0xFF0A0E21),
         ),
       ),

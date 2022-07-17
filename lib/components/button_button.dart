@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'constants.dart';
+import '../constants.dart';
 
 class BottomButton extends StatelessWidget {
 BottomButton({required this.onTap, required this.buttonTitle});
 
-final VoidCallback onTap;
-final String buttonTitle;
+final VoidCallback? onTap;
+final String? buttonTitle;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ final String buttonTitle;
       child: Container(
         child: Center(
           child: Text(
-            buttonTitle,
+            buttonTitle!,
             style: kLargeButtonTextStyle,
           ),
         ),

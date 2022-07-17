@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
-import 'constants.dart';
-import 'reusable_card.dart';
+import '../components/button_button.dart';
+import '../constants.dart';
+import '../components/reusable_card.dart';
 
 class ResultsPage extends StatelessWidget {
-  const ResultsPage({Key? key}) : super(key: key);
+  const ResultsPage(
+      {Key? key, this.bmiResult, this.resultText, this.interpretation})
+      : super(key: key);
+
+  final String? bmiResult;
+  final String? resultText;
+  final String? interpretation;
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +22,14 @@ class ResultsPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Expanded(
-            child: Text(
-              "Your Result",
-              style: KTitleTextStyle, textAlign: TextAlign.center,
+          Container(
+            padding: const EdgeInsets.all(15.0),
+            alignment: Alignment.bottomLeft,
+            child: Expanded(
+              child: Text(
+                "Your Result",
+                style: KTitleTextStyle,
+              ),
             ),
           ),
           Expanded(
@@ -29,15 +40,15 @@ class ResultsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    "Normal",
+                    resultText!.toUpperCase(),
                     style: kResultTextStyle,
                   ),
                   Text(
-                    "23.8",
+                    bmiResult!,
                     style: kBMITextStyle,
                   ),
                   Text(
-                    "Your BMI result is normal, keep up the normal result",
+                    interpretation!,
                     style: kBodyTextStyle,
                     textAlign: TextAlign.center,
                   )
@@ -45,6 +56,10 @@ class ResultsPage extends StatelessWidget {
               ),
             ),
             flex: 5,
+          ),
+          BottomButton(
+            onTap: () => Navigator.pop(context),
+            buttonTitle: "RE-CALCULATE",
           )
         ],
       ),
